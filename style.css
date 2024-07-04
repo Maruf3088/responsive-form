@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #21d4fd;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  max-width: 850px;
+  width: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 70px 30px;
+  border-radius: 7px;
+}
+.form-container h1 {
+  font-weight: 600;
+  position: relative;
+}
+.form-container h1::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 10%;
+  background-image: linear-gradient(19deg, #21d4fd 0%, #b721ff 100%);
+  top: 50px;
+}
+.element-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin: 20px 0;
+}
+.element {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.element input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+.element input:focus {
+  border-bottom: 2px solid rgb(10, 114, 199);
+}
+.gender-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.btn {
+  outline: none;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 450;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+  transition: all 0.5s ease;
+  border-radius: 7px;
+}
+.btn:hover {
+  color: black;
+}
+
+/*
+*Media Queries
+*/
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 30px 30px;
+  
+  }
+  .element-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+@media (max-height: 750px) {
+  .element-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    height: 90%;
+    overflow-y: scroll;
+  }
+}
+@media (max-width: 568px) {
+  .btn {
+    padding: 3px 10px;
+  }
+}
